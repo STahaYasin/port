@@ -105,6 +105,7 @@ if (!$usmail) {
         </div>
         <div ng-class="class2" ng-click="closeMenu()" class="bck" id="bck"></div>
         <div ng-class="class" class="menuid" id="menuid">
+            <div class="triac"></div>
             <p><?php echo $fristname . " " . $lastname;?></p>
             <p><?php echo $usermail; ?></p>
             <div class="border"></div>
