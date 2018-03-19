@@ -1,0 +1,256 @@
+html, body, header, footer, div, paper{
+    padding: 0px;
+    margin: 0px;
+}
+p, a, label, button, i, li, td, h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+}
+
+h4{
+    margin-bottom: 5px;
+}
+
+.btn{
+    border-radius: 5px;
+    font-style: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn_blue{
+    background-color: #4285f4;
+    color: #ffffff;
+}
+.btn_blue{
+    background-color: #4285f4;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn_red{
+    background-color: #f12a2a;
+    color: #ffffff;
+    position: relative;
+    top: 11px;
+    left: 50px;
+}
+    .btn_red:hover{
+        background-color: #f12a2a;
+        color: #ffffff;
+        position: relative;
+        top: 11px;
+        left: 50px;
+        opacity: 0.65;
+        cursor: pointer
+    }
+header{
+/*    margin: 10px;*/
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    padding: 10px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    width: calc(100% - 50px);
+/*    width: calc(100% - 40px);*/
+    height: 90px;
+    
+    background-color: #fff;
+    box-shadow: 0 3px 9px -1px grey;
+}
+.header_1, .header_2, .header_3{
+    height: 40px;
+    display: inline-block;
+}
+.header_1{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.header_2{
+    width: 250px;
+    display: block;
+    margin: 0px;
+    float: left;
+}
+.header_3{
+    width: calc(100% - 260px);
+    display: block;
+    float: right;
+    
+    padding-left: 10px;
+}
+header button{
+}
+.profile_pic_small{
+    float: right;
+    top: -100px;
+    
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 100%;
+    
+    background-color: #4285f4;
+    cursor: pointer;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+button{
+    background-color: aquamarine;
+    padding: 5px;
+    border: 0px solid transparent;
+    height: 40px;
+    padding: 0px;
+    width: 100px;
+    text-align: center;
+}
+
+main{
+    width: calc(100% - 250px - 30px);
+    padding: 15px;
+    
+    margin-top: 110px;
+    margin-left: 250px;
+    
+    padding-top: 50px;
+}
+
+/* ---- bg ---- */
+
+.bg_wh{
+    background-color: #fff;
+    width: auto;
+}
+
+
+.white_center_box{
+    margin: auto;
+    margin-top: 20vh;
+    background-color: white;
+    padding: 50px;
+    width: 400px;
+    box-shadow: 0 4px 5px -1px gray;
+    border-radius: 5px;
+}
+.white_center_box > input{
+    width: 70%;
+}
+.box{
+/*    background-color: #fff;*/
+/*    box-shadow: 0 4px 5px -1px gray;*/
+    
+    width: calc(100% - 20px);
+    padding: 10px;
+    
+/*    border-radius: 15px;*/
+}
+/* sidenav and main */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    padding-top: 20px;
+    top: 110px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #242424;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidenav a:hover {
+    background-color: #e4e4e4;
+    color: #242424;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.sidenav-active{
+    background-color: #e4e4e4;  
+}
+div.menuid{
+    width: 190px;
+    height: 150px;
+    background-color: black;
+    position: fixed;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 5;
+    
+    transition: 0.6s;
+}
+.open{
+    top: 60px;
+}
+.closed{
+    top: -160px;
+}
+.open2{
+    width: 100%;
+    height: 100vh;
+}
+.closed2{
+    width: 0px;
+    height: 0px;
+}
+.bck{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+    
+    background-color: #00f;
+    opacity: 0.01;
+    transition: 0.5s;
+}
+.btnlogout{
+    position: relative;
+    top: 20px;
+    left: 60px;
+    padding: 5px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+}
+
+.menuid p{
+    padding: 4px;
+    font-size: small;
+    position: relative;
+    left: 10px;
+    width: auto;
+    height: auto;
+}
+.border{
+    width: 100%;
+    border-bottom: 1px solid #cacaca;
+}

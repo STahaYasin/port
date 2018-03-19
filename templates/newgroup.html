@@ -1,0 +1,18 @@
+<div class="box">
+    <h3>ADD A NEW GROUP</h3>
+    <div>
+        <h4>ABOUT THE GROUP</h4>
+        <label>NAAM GROEP</label><input ng-model="newobject.name" placeholder="NAME" type="text"/>
+        <br>
+        <label>CODE GROEP</label><input ng-model="newobject.code" placeholder="CODE" type="text"/>
+    </div>
+    <div>
+        <h4>DETAILS</h4>
+        <label>AANTAL STUDENTEN: </label><input type="number" ng-model="newobject.countstudents" placeholder="Aantal studenten"/>
+        <br>
+        <label>AANTAL TEAMS: </label><input type="number" ng-model="newobject.countgroups" placeholder="Aantal teams"/>
+    </div>
+    <div>
+        <button ng-click="addnewgroup()" class="btn btn_blue">CREATE</button>
+    </div>
+</div>
