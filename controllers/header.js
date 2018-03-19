@@ -39,4 +39,19 @@ app.controller("header", function($scope, $http, $location){
     }
     $scope.class = "closed";
     $scope.class2 = "closed2";
+
+    $scope.logout = function(){
+        $scope.closeMenu();
+
+        $http.get("api/logout.php").then(function(res){
+            if(res.data.success == true){
+                //window.location = "login.php";
+            }
+            else{
+                
+            }
+        }, function(error){
+            console.error(error);
+        });
+    }
 });

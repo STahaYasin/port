@@ -227,10 +227,6 @@ div.menuid{
     top: 0px;
     right: 0px;
     z-index: 4;
-    
-    background-color: #00f;
-    opacity: 0.01;
-    transition: 0.5s;
 }
 .btnlogout{
     position: relative;

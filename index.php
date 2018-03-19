@@ -108,7 +108,7 @@ if (!$usmail) {
             <p><?php echo $fristname . " " . $lastname;?></p>
             <p><?php echo $usermail; ?></p>
             <div class="border"></div>
-            <button class="btn btn_red">Logout</button>
+            <button class="btn btn_red" ng-click="logout()">Logout</button>
         </div>
         </header>
             <div class="sidenav">
