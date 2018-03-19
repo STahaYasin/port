@@ -58,6 +58,7 @@ if (!$usmail) {
         <script src="controllers/groups.js"></script>
         <script src="controllers/newgroup.js"></script>
         <script src="controllers/select.js"></script>
+        <script src="controllers/sidenav.js"></script>
         <script> 
             
             
@@ -88,8 +89,11 @@ if (!$usmail) {
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',
                 })
+                .when('/home', {
+                    templateUrl: 'templates/home.html'
+                })
                 .otherwise({
-                    redirectTo: '/groups'
+                    redirectTo: '/home'
                 });
             });
             
@@ -99,22 +103,23 @@ if (!$usmail) {
     <body ng-app="port_app">
         <header ng-controller="header">
             <div class="header_1">
-                <button class="btn btn_blue" ng-click="openHome()">HOME</button>
                 <button class="btn btn_blue" ng-click="openNewGroep()">NEW TOUR</button>
                 <img class="profile_pic_small" ng-click="myFunction()" src="images/icons/defaultprofilepic.png" />
-        </div>
-        <div ng-class="class2" ng-click="closeMenu()" class="bck" id="bck"></div>
-        <div ng-class="class" class="menuid" id="menuid">
-            <div class="triac"></div>
-            <p><?php echo $fristname . " " . $lastname;?></p>
-            <p><?php echo $usermail; ?></p>
-            <div class="border"></div>
-            <button class="btn btn_red" ng-click="logout()">Logout</button>
-        </div>
-        </header>
-            <div class="sidenav">
-                <a href="">Statistics</a>
             </div>
+            <div ng-class="class2" ng-click="closeMenu()" class="bck" id="bck"></div>
+            <div ng-class="class" class="menuid" id="menuid">
+<!--                <div class="triac"></div>-->
+                <h4><?php echo $fristname . " " . $lastname;?></h4>
+                <p><?php echo $usermail; ?></p>
+<!--                <div class="border"></div>-->
+                <button class="btn btn_red" ng-click="logout()">Logout</button>
+            </div>
+        </header>
+        <div ng-controller="sidenav" class="sidenav">
+            <a ng-click="goHome()" href="">Home</a>
+            <a href="index.php/#!/home">Home2</a>
+            <a href="">Statistics</a>
+        </div>
         <main ng-view="ngRoute">
             
         </main>
