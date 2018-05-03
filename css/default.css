@@ -290,3 +290,21 @@ div.menuid button{
     width: 100%;
     border-bottom: 1px solid #cacaca;
 }
+/* Sidenav Menu Box Aspect */
+div.border1{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+div.border2{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+div.border3{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+div.border-icons{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}

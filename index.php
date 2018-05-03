@@ -51,7 +51,7 @@ if (!$usmail) {
         <script src="js/angular.route.min.js"></script>
         
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
         
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>-->
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>-->
@@ -95,6 +95,9 @@ if (!$usmail) {
                 .when('/home', {
                     templateUrl: 'templates/home.html'
                 })
+                .when('/register', {
+                    templateUrl: 'templates/register.html'
+                })
                 .otherwise({
                     redirectTo: '/home'
                 });
@@ -119,9 +122,9 @@ if (!$usmail) {
             </div>
         </header>
         <div ng-controller="sidenav" class="sidenav">
-            <a ng-click="goHome()" href=""><i class="fas fa-home"></i> Home</a>
-            <a href="index.php/#!/home">Home2</a>
-            <a href="">Statistics</a>
+                <a ng-click="goHome()" href=""><i class="fas fa-home"></i> Home</a>
+                <a ng-click="goStatistics()" href=""><i class="fas fa-chart-line"></i>Statistics</a>
+                <a ng-click="goRegister()" href=""><i class="fas fa-user-plus"></i>Register</a>
         </div>
         <main ng-view="ngRoute">
             
