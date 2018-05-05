@@ -24,7 +24,7 @@ else{
 }
 
 $date = date("Y-m-d H:i:s");
-$newname = $date . " " . $grp_name;
+$newname = $grp_name;
 
 $ad_id = $_SESSION["admin_id"];
 

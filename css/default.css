@@ -318,3 +318,13 @@ p.inline{
 p.index_email{
   text-transform: lowercase;
 }
+table{
+  width: 100%;
+  text-align: left;
+  padding: -10px;
+  border-collapse: collapse;
+}
+th, td{
+  border-style: outset;
+
+}
