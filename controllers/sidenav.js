@@ -7,5 +7,5 @@ app.controller("sidenav", function($scope, $http, $location){
     }
     $scope.goStatistics = function(){
         $location.path("statistics")
-    }
+    } 
 });

@@ -70,10 +70,7 @@ if (!$usmail) {
         <script>
             app.config(function($routeProvider){
                 $routeProvider
-                .when('/groups', {
-                    templateUrl: 'templates/groups.html',
-                    controller: 'groups'
-                })
+
                 .when('/newgroup', {
                     templateUrl: 'templates/newgroup.php',
                     controller: 'newgroup'
@@ -82,9 +79,8 @@ if (!$usmail) {
                     templateUrl: 'templates/select.html',
                     controller: 'select'
                 })
-                .when('/group/:groupid', {
-                    templateUrl: 'templates/groups.html',
-                    controller: 'groups'
+                .when('/groups', {
+                  templateUrl: 'templates/groups.php'
                 })
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',

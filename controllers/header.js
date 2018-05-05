@@ -14,11 +14,9 @@ app.controller("header", function($scope, $http, $location){
         });
     }
     start();
-
     $scope.openGroups = function(){
-      $location.path("/group/:groupid")
+        $location.path("groups")
     }
-
     $scope.openNewGroep = function(){
         $location.path("/newgroup");
     }
