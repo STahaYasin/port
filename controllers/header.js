@@ -1,6 +1,6 @@
 app.controller("header", function($scope, $http, $location){
     $scope.ip = "000.000.0.0";
-    
+
     function start(){
         $http.get("api/gethost.php").then(function(res){
             if(res.data.success == true){
@@ -14,7 +14,11 @@ app.controller("header", function($scope, $http, $location){
         });
     }
     start();
-    
+
+    $scope.openGroups = function(){
+      $location.path("/group/:groupid")
+    }
+
     $scope.openNewGroep = function(){
         $location.path("/newgroup");
     }
@@ -22,7 +26,7 @@ app.controller("header", function($scope, $http, $location){
     $scope.openHome = function(){
         $location.path("/groups");
     }
-    
+
     $scope.myFunction = function() {
         $scope.class = "open";
         $scope.class2 = "open2";
@@ -35,7 +39,7 @@ app.controller("header", function($scope, $http, $location){
         $scope.class2 = "closed2";
         //document.getElementById("menuid").style.top = "0px;";
         //document.getElementById("bck").style.width = "0px";
-        //document.getElementById("bck").style.height = "0px";        
+        //document.getElementById("bck").style.height = "0px";
     }
     $scope.class = "closed";
     $scope.class2 = "closed2";
@@ -48,7 +52,7 @@ app.controller("header", function($scope, $http, $location){
                 window.location = "login.php";
             }
             else{
-                
+
             }
         }, function(error){
             console.error(error);

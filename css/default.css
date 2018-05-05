@@ -23,11 +23,16 @@ h4{
 .btn_blue{
     background-color: #4285f4;
     color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
 }
-.btn_blue{
+.btn_blue2{
     background-color: #4285f4;
     color: #ffffff;
     cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    bottom: 8px;
 }
 .btn_red{
     background-color: #f12a2a;
@@ -43,24 +48,24 @@ h4{
 /*        top: 11px;*/
 /*        left: 50px;*/
         opacity: 0.65;
-        
+
     }
 header{
 /*    margin: 10px;*/
-    
+
     position: fixed;
     top: 0px;
     left: 0px;
-    
+
     padding: 10px;
     padding-top: 10px;
     padding-left: 25px;
     padding-right: 25px;
-    
+
     width: calc(100% - 50px);
 /*    width: calc(100% - 40px);*/
     height: 90px;
-    
+
     background-color: #fff;
     box-shadow: 0 3px 9px -1px grey;
 }
@@ -82,7 +87,7 @@ header{
     width: calc(100% - 260px);
     display: block;
     float: right;
-    
+
     padding-left: 10px;
 }
 header button{
@@ -90,12 +95,12 @@ header button{
 .profile_pic_small{
     float: right;
     top: -100px;
-    
+
     width: 40px;
     height: 40px;
-    
+
     border-radius: 100%;
-    
+
     background-color: #4285f4;
     cursor: pointer;
 }
@@ -119,10 +124,10 @@ button{
 main{
     width: calc(100% - 250px - 30px);
     padding: 15px;
-    
+
     margin-top: 110px;
     margin-left: 250px;
-    
+
     padding-top: 50px;
 }
 
@@ -149,10 +154,9 @@ main{
 .box{
 /*    background-color: #fff;*/
 /*    box-shadow: 0 4px 5px -1px gray;*/
-    
+
     width: calc(100% - 20px);
     padding: 10px;
-    
 /*    border-radius: 15px;*/
 }
 /* sidenav and main */
@@ -195,7 +199,7 @@ main{
 }
 
 .sidenav-active{
-    background-color: #e4e4e4;  
+    background-color: #e4e4e4;
 }
 div.menuid{
     padding-top: 15px;
@@ -215,12 +219,12 @@ div.menuid button{
     height: 50px;
     top: 0px;
     left: 0px;
-    
+
     border-radius: 5px;
-    
+
 /*    border-top-left-radius: 0px;*/
 /*    border-top-right-radius: 0px;*/
-    
+
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -241,10 +245,10 @@ div.menuid button{
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid white;
-    
+
 /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     position: relative;
-    
+
     top: -10px;
     right: -155px;
 }
@@ -307,4 +311,10 @@ div.border3{
 div.border-icons{
     border-right: 2px solid black;
     border-left: 2px solid black;
+}
+p.inline{
+  display: inline;
+}
+p.index_email{
+  text-transform: lowercase;
 }
