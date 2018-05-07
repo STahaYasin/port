@@ -14,6 +14,7 @@ app.controller("header", function($scope, $http, $location){
         });
     }
     start();
+
     $scope.openGroups = function(){
         $location.path("groups")
     }

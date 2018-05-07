@@ -5,19 +5,22 @@ $name = utf8_encode(ucwords($dbinfoname['Name']));
 $id = utf8_encode(ucwords($dbinfoname['G_ID']));
 $status = utf8_encode(ucwords($dbinfoname['Status']));
 $currentbtn = "";
-  if ($status=='0') {
-    $status = 'Stoppped';
+
+switch ($status) {
+  case '0':
+    $statusoutp = 'Stoppped';
     $currentbtn = 'Start';
-  }else {
-    if ($status=='1'){
-            $status = 'Running';
-            $currentbtn = 'Pause';
-          }
-  else {
-    if ($status=='2') {
-            $status = 'Paused';
-            $currentbtn = 'Resume';
-    }
-  }
+    break;
+  case '1':
+    $statusoutp = 'Running';
+    $currentbtn = 'Pause';
+    break;
+  case '2':
+    $statusoutp = 'Paused';
+    $currentbtn = 'Resume';
+    break;
+  default:
+    $statusoutp = 'Error: Game Status';
+    break;
 }
 ?>

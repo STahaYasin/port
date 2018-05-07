@@ -7,6 +7,8 @@ include '../api/groups_info.php';
 
 <html>
 
+
+
   <body>
     <table>
       <tr>
@@ -18,8 +20,10 @@ include '../api/groups_info.php';
       <tr>
         <td><?php echo $name ?></td>
         <td><?php echo $id ?></td>
-        <td><?php echo $status ?></td>
-        <td> <button  class="btn btn_blue" type="button" name="action_group_game"><?php print($currentbtn) ?></button> </td>
+        <td><?php echo $statusoutp ?></td>
+        <td>
+            <?php include '../api/groupbtn.php'  ?>
+        </td>
       </tr>
     </table>
   </body>
