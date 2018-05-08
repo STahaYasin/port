@@ -29,6 +29,9 @@ include "api/loginid.php";
         <script src="controllers/newgroup.js"></script>
         <script src="controllers/select.js"></script>
         <script src="controllers/sidenav.js"></script>
+        <script src="js/java.js"></script>
+
+        </script>
 
 
         <script>

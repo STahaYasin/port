@@ -20,7 +20,7 @@ switch ($status) {
     $currentbtn = 'Resume';
     break;
   default:
-    $statusoutp = 'Error: Game Status';
+    $statusoutp = '';
     break;
 }
 ?>
