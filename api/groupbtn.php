@@ -4,7 +4,6 @@
 </head>
   <body>
 
-
 <div class="dropdown">
 <button onclick="myFunction()" class="btn btn_blue">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
@@ -28,7 +27,6 @@
 
         break;
     } ?> -->
-
 
 
   </body>
