@@ -1,22 +1,12 @@
 <?php
-
 include '../db.php';
 
-$sql = "SELECT Name, status FROM groups WHERE Name='Port Team'";
-$result = mysqli_query($conn, $sql);
-while ($row = $result->fetch_assoc()) {
-    $nameteam = $row['Name'];
-    $currentstatus = $row['status'];
-}
-if ($currentstatus!=2) {
-  $sqlupdate = "UPDATE groups SET status=2 WHERE Name='$nameteam'";
+$gid = $_GET['G_ID'];
+
+  $sqlupdate = "UPDATE groups SET status=2 WHERE G_ID=$gid";
   if($conn->query($sqlupdate) === TRUE) {
-      echo 'Sucessly updated';
       header('location: ../index.php#!/groups');
-  } else {
-      echo  $conn->error;
-  }
 } else{
-      echo 'Game already running';
+      echo 'Error while updating status';
 }
 ?>

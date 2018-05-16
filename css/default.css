@@ -25,14 +25,14 @@ h4{
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 3px 9px -1px grey;
 }
-.btn_blue2{
-    background-color: #4285f4;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-    position: relative;
-    bottom: 8px;
+.btn_blue:hover{
+    background: #e1e1e1;
+    text-decoration: none;
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition-duration: 0.5s;
 }
 .btn_red{
     background-color: #f12a2a;
@@ -95,14 +95,22 @@ header button{
 .profile_pic_small{
     float: right;
     top: -100px;
-
     width: 40px;
     height: 40px;
-
     border-radius: 100%;
-
     background-color: #4285f4;
+    box-shadow: 0 3px 9px -1px grey;
     cursor: pointer;
+}
+.profile_pic_small:hover{
+  -webkit-filter: brightness(120%);
+}
+.date{
+      position: relative;
+      float: right;
+      right: 10px;
+      top: 9px;
+      font-weight: bold;
 }
 input{
     padding: 5px;
@@ -113,10 +121,9 @@ input{
 }
 button{
     background-color: aquamarine;
-    padding: 5px;
+    padding: 10px;
     border: 0px solid transparent;
     height: 40px;
-    padding: 0px;
     width: 100px;
     text-align: center;
 }
@@ -328,44 +335,116 @@ th, td{
   border-style: outset;
   text-align: center;
 }
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+a {
+  color: #495057;
+  font-weight: bold;
 }
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+a.buttonaction{
+  position: relative;
+  margin-left: 2px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #4285f4;
+  color: #ffffff;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  z-index: -1;
 }
-
-.dropdown {
+a.alertstopbutton{
+  top: 30px;
+  position: relative;
+  margin: 50px;
+  padding: 5px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #4285f4;
+  color: #ffffff;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+div.centerdiv{
+  font-size: 30px;
+  position: relative;
+  top: 40%;
+  text-align: center;
+}
+.dot_green{
     position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
     display: inline-block;
 }
-
-.dropdown:focus .dropdown-content {
-    display: block;
+.dot_red{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: -1;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    display: none;
+.dot_yellow{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: #ffad02;
+    border-radius: 50%;
+    display: inline-block;
 }
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.dot_green_info{
+    top: 5px;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
 }
-
-.dropdown a:hover {background-color: #ddd}
-
-.show {display:block;}
+.dot_red_info{
+    top: 5px;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot_yellow_info{
+    top: 5px;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    background-color: #ffad02;
+    border-radius: 50%;
+    display: inline-block;
+}
+p.line{
+  display: inline;
+}
+div.status{
+  margin: 5px;
+}
+select.lvl{
+  background-color: DodgerBlue;
+  border-color: #fff transparent transparent transparent;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+}
+select.lvl:hover{
+  cursor: pointer;
+}
+option{
+  font-weight: bold;
+}
+option:hover{
+  cursor: pointer;
+}

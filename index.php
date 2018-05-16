@@ -1,9 +1,7 @@
 <?php
 include "db.php";
 include "api/loginid.php";
-
 ?>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -49,6 +47,9 @@ include "api/loginid.php";
                 .when('/groups', {
                   templateUrl: 'templates/groups.php'
                 })
+                .when('/info', {
+                  templateUrl: 'templates/info.php'
+                })
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',
                 })
@@ -70,8 +71,12 @@ include "api/loginid.php";
         <header ng-controller="header">
             <div class="header_1">
                 <button class="btn btn_blue" ng-click="openNewGroep()">NEW TOUR</button>
-                <button class="btn btn_blue2" ng-click="openGroups()">CREATED GROUPS</button>
+                <button class="btn btn_blue" ng-click="openGroups()">GROUP LIST</button>
+                <button class="btn btn_blue" ng-click="openLvlinfo()">LEVELS INFO</button>
                 <img class="profile_pic_small" ng-click="myFunction()" src="images/icons/defaultprofilepic.png" />
+                <div class="date">
+                  <?php echo date("h:i:sa"); ?>
+                </div>
             </div>
             <div ng-class="class2" ng-click="closeMenu()" class="bck" id="bck"></div>
             <div ng-class="class" class="menuid" id="menuid">
@@ -83,9 +88,7 @@ include "api/loginid.php";
             </div>
         </header>
         <div ng-controller="sidenav" class="sidenav">
-                <a ng-click="goHome()" href=""><i class="fas fa-home"></i> Home</a>
                 <a ng-click="goStatistics()" href=""><i class="fas fa-chart-line"></i>Statistics</a>
-                <a ng-click="goRegister()" href=""><i class="fas fa-user-plus"></i>Register</a>
         </div>
         <main ng-view="ngRoute">
 
