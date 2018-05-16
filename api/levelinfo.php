@@ -1,0 +1,1 @@
+<h3>Selected level</h3><?php echo $_GET["level"]; ?><h3> Here is some text send by thee php server</h3>

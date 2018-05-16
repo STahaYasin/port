@@ -28,8 +28,7 @@ include "api/loginid.php";
         <script src="controllers/select.js"></script>
         <script src="controllers/sidenav.js"></script>
         <script src="js/java.js"></script>
-
-        </script>
+        <script src="controllers/info.js"></script>
 
 
         <script>
@@ -45,10 +44,15 @@ include "api/loginid.php";
                     controller: 'select'
                 })
                 .when('/groups', {
-                  templateUrl: 'templates/groups.php'
+                    templateUrl: 'templates/groups.php'
                 })
                 .when('/info', {
-                  templateUrl: 'templates/info.php'
+                    templateUrl: 'templates/info.php',
+                    controller: 'info'
+                })
+                .when('/info/:paramInfo', {
+                    templateUrl: 'templates/info.php',
+                    controller: 'info'
                 })
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',
