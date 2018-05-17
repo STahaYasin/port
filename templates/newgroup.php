@@ -1,6 +1,8 @@
+<?php include "../api/message.php"; ?>
 
   <div class="box">
       <h3>ADD A NEW GROUP</h3>
+      <?php echo $successmessage; ?>
       <div>
         <form id="frm_addtour" class="" action="api/addtour.php" method="post">
             <div>
@@ -14,4 +16,3 @@
             </div>
       </form>
   </div>
-

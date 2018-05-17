@@ -28,11 +28,13 @@ $newname = $grp_name;
 
 $ad_id = $_SESSION["admin_id"];
 
-$sql = "INSERT INTO `groups` (`CountTeams`,`G_ID`, `CountUsers`, `Status`, `Name`, `dt_create`, `dt_start`, `dt_stop`, `code`, `AD_ID`) VALUES ('$grp_count', null, '$grp_number', '0', '$newname', '$date', '', '', '$code', '$ad_id');";
+$sql = "INSERT INTO `groups` (`CountTeams`,`G_ID`, `CountUsers`, `Status`, `Name`, `dt_create`, `dt_start`, `dt_stop`, `code`, `AD_ID`)
+        VALUES ('$grp_count', null, '$grp_number', '0', '$newname', '$date', '', '', '$code', '$ad_id');";
 
 
 
 $sqlres = mysqli_query($conn, $sql) or die(json_encode(new Result(false, "Error in db!", null)));
+          $sucessmessage = 'Group added with success!';
           header('Location: ../index.php#!/newgroup');
 /*
 $last_id = $conn->insert_id;
