@@ -19,16 +19,26 @@ app.controller("newgroup", function($scope, $http, $location){
             console.error(error);
         });
     }
+    
+    $scope.group_name = "";
+    $scope.group_number = 0;
+    $scope.new_message = null;
+    
     $scope.sendnewgroup=function(){
-      $http({
-              method: 'POST',
-              url: '/someUrl'
-            }).then(function successCallback(response) {
-                // this callback will be called asynchronously
-                // when the response is available
-              }, function errorCallback(response) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-              });
+        $http({
+            method: 'POST',
+            url: 'api/creategroup.php',
+            data: {
+                group_name: $scope.group_name,
+                group_number: $scope.group_number
+            }
+        }).then(function successCallback(res) {
+            console.log(res);
+            
+            $scope.new_message = "New group created successfully!";  //<------
+            
+        }, function errorCallback(error) {
+            console.warn(error);
+        });
     }
 });

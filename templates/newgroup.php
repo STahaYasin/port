@@ -2,7 +2,6 @@
 
   <div class="box">
       <h3>ADD A NEW GROUP</h3>
-      <?php echo $successmessage; ?>
       <div>
         <form id="frm_addtour" class="" action="api/addtour.php" method="post">
             <div>
@@ -15,4 +14,11 @@
               <button type="submit" name="submit_btn" class="btn btn_blue">SUBMIT</button>
             </div>
       </form>
+      
+      <h4 ng-show="new_message">{{new_message}}</h4>
+      <div>
+          <input type="text" ng-model="group_name" placeholder="Group Name" required>
+          <input type="text" ng-model="group_number" placeholder="Count of Students" required>
+          <button ng-click="sendnewgroup()">SUBMIT</button>
+      </div>
   </div>
