@@ -44,7 +44,9 @@ include "api/loginid.php";
                     controller: 'select'
                 })
                 .when('/groups', {
-                    templateUrl: 'templates/groups.php'
+                    templateUrl: 'templates/groups.php',
+                    reloadOnSearch: false,
+                    controller: 'groups'
                 })
                 .when('/info', {
                     templateUrl: 'templates/info.php',

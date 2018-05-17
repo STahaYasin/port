@@ -451,6 +451,10 @@ div.line{
 }
 textarea.lvlinfo{
    position: relative;
+
    width: 100%;
    height: 100px;
  }
+div.sucessmessage{
+  color: green;
+}
