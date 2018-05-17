@@ -61,6 +61,9 @@ include 'load_groups.php';
                 </tr>';
                  } ?>
     </table>
+    <table>
+        <tr ng-repeat="item in groups"><td>{{item.name}}</td><td>{{item.g_id}}</td><td>{{item.status}}</td></tr>
+    </table>
     <div class="status">
       <span class='dot_green_info'></span><p class="line">Running</p><br>
     </div>

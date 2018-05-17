@@ -8,7 +8,7 @@
         <form method="post">
           <input type="text" ng-model="group_name" placeholder="Group Name" required>
           <input type="text" ng-model="group_number" placeholder="Count of Students" required>
-          <input type="submit" ng-click="sendnewgroup()"></input>
+          <input type="submit" ng-click="sendnewgroup()"/>
         </form>
       </div>
   </div>
