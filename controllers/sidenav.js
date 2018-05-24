@@ -7,5 +7,11 @@ app.controller("sidenav", function($scope, $http, $location){
     }
     $scope.goStatistics = function(){
         $location.path("statistics")
-    } 
+    }
+    $scope.openLvlinfo = function(){
+        $location.path("info")
+    }
+    $scope.openScores = function(){
+        $location.path("scores")
+    }
 });

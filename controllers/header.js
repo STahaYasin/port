@@ -18,13 +18,9 @@ app.controller("header", function($scope, $http, $location){
     $scope.openGroups = function(){
         $location.path("groups")
     }
-    $scope.openLvlinfo = function(){
-        $location.path("info")
-    }
     $scope.openNewGroep = function(){
         $location.path("/newgroup");
     }
-
     $scope.openHome = function(){
         $location.path("/groups");
     }

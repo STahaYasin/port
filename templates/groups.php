@@ -2,7 +2,7 @@
 
 include '../db.php';
 include '../result.php';
-include 'load_groups.php';
+include '../api/load_groups/load_groups_actions.php';
 ?>
 
 <html>
@@ -16,54 +16,32 @@ include 'load_groups.php';
 </head>
   <body>
     <table>
-      <tr>
-        <th>GROUP NAME</th>
-        <th>ID</th>
-        <th>STATUS</th>
-        <th>ACTION</th>
-        <th>Delete</th>
-      </tr>
-
-        <?php foreach($record as $rec){
-                echo '<tr>
-                  <td>' . $rec['Name'] . '</td>
-                  <td>' . $rec['G_ID'] . '</td>
-                  <td>';
-                  switch ($rec['Status']) {
-                      case 0:
-                          echo "<span class='dot_red'></span>";
-                          break;
-                      case 1:
-                          echo "<span class='dot_green'></span>";
-                          break;
-                      case 2:
-                          echo "<span class='dot_yellow'></span>";
-                          break;
-                  }
-                  echo '</td>
-                  <td>
-                  <div class="action">';
-                         if ($rec['Status']==0){
-                         echo '<a class="buttonaction" href="api/startaction.php?G_ID='.$rec['G_ID'].'">START</a>';
-                    }
-                         if ($rec['Status']==1){
-                         echo '<a class="buttonaction" href="api/pauseaction.php?G_ID='.$rec['G_ID'].'">PAUSE</a>';
-                    }
-                         if ($rec['Status']==2){
-                         echo '<a class="buttonaction" href="api/startaction.php?G_ID='.$rec['G_ID'].'">RESUME</a>';
-                    }
-                         if ($rec['Status']!=0){
-                         echo '<a class="buttonaction" href="api/confirmstop.php?G_ID='.$rec['G_ID'].'">STOP</a>';
-                    }
-                  echo '</div>
-                  </td>
-                  <td> <a href="api/confirmdelete.php?G_ID='.$rec['G_ID'].'"><i class="fas fa-trash-alt"></i></a></td>
-                </tr>';
-                 } ?>
-    </table>
-    <table>
-        <tr ng-repeat="item in groups"><td>{{item.name}}</td><td>{{item.g_id}}</td><td>{{item.status}}</td></tr>
-    </table>
+        <tr>
+          <th>GROUP</th>
+          <th>ID</th>
+          <th>STATUS</th>
+          <th>ACTION</th>
+          <th>DELETE</th>
+        </tr>
+        <tr ng-repeat="item in groups">
+          <td>{{item.name}}</td>
+          <td>{{item.g_id}}</td>
+          <td>
+              <span ng-show="item.status == 0" class='dot_red'></span>
+              <span ng-show="item.status == 1" class='dot_green'></span>
+              <span ng-show="item.status == 2" class='dot_yellow'></span>
+          </td>
+          <td>
+            <div class="action">
+              <a ng-show="item.status == 0" class="buttonaction" href="api/actions/startaction.php?G_ID={{item.g_id}}">START</a>
+              <a ng-show="item.status == 1" class="buttonaction" href="api/actions/pauseaction.php?G_ID={{item.g_id}}">PAUSE</a>
+              <a ng-show="item.status == 2" class="buttonaction" href="api/actions/startaction.php?G_ID={{item.g_id}}">RESUME</a>
+              <a ng-show="item.status != 0" class="buttonaction" href="api/actions/confirmstop.php?G_ID={{item.g_id}}">STOP</a>
+            </div>
+          </td>
+          <td><a href="api/actions/confirmdelete.php?G_ID={{item.g_id}}"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+      </table>
     <div class="status">
       <span class='dot_green_info'></span><p class="line">Running</p><br>
     </div>

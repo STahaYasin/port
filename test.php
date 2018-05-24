@@ -1,15 +1,24 @@
 <?php
-  include 'db.php';
-  $id = 0;
-  $a = 0;
-  $prj= mysqli_query($conn,"select * from groups") or die(mysqli_error($conn));
-          $record = array();
-          while($row = mysqli_fetch_assoc($prj)){
-              $record[$id] = $row;
-              $id++;
-          }
-          while($a <= $id){
-              echo $record[$a]['Name'] . '<br>';
-              $a++;
-          }
+$i = 0;
+while($i<1) {
+echo '<form action="kasjdasd.php">
+<table>
+<tr>
+<td>1</td>
+<td>
+    <textarea></textarea>
+    <input type="button" name="" value="Submit">
+    </td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>
+        <textarea></textarea>
+        <input type="button" name="" value="Submit">
+        </td>
+        </tr>
+</table>
+</form>';
+ $i++;
+}
 ?>

@@ -56,6 +56,9 @@ include "api/loginid.php";
                     templateUrl: 'templates/info.php',
                     controller: 'info'
                 })
+                .when('/scores', {
+                    templateUrl: 'templates/scores.php',
+                })
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',
                 })
@@ -78,7 +81,6 @@ include "api/loginid.php";
             <div class="header_1">
                 <button class="btn btn_blue" ng-click="openNewGroep()">NEW TOUR</button>
                 <button class="btn btn_blue" ng-click="openGroups()">GROUP LIST</button>
-                <button class="btn btn_blue" ng-click="openLvlinfo()">LEVELS INFO</button>
                 <img class="profile_pic_small" ng-click="myFunction()" src="images/icons/defaultprofilepic.png" />
                 <div class="date">
                   <?php echo date("h:i:sa"); ?>
@@ -94,7 +96,8 @@ include "api/loginid.php";
             </div>
         </header>
         <div ng-controller="sidenav" class="sidenav">
-                <a ng-click="goStatistics()" href=""><i class="fas fa-chart-line"></i>Statistics</a>
+                <a ng-click="openLvlinfo()" href=""><i class="fas fa-edit"></i>Level Info</a>
+                <a ng-click="openScores()" href=""><i class="fas fa-chart-line"></i>Scores</a>
         </div>
         <main ng-view="ngRoute">
 
