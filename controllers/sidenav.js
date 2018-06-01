@@ -14,4 +14,7 @@ app.controller("sidenav", function($scope, $http, $location){
     $scope.openScores = function(){
         $location.path("scores")
     }
+    $scope.openHistory = function(){
+        $location.path("history")
+    }
 });

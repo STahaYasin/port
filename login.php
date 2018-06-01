@@ -16,19 +16,19 @@
         <link href="css/default.css" type="text/css" rel="stylesheet"/>
 
         <script src="js/sha512.js"></script>
-        
+
         <script>
-        
+
             var app = angular.module("loginapp", []);
-            
+
             app.controller("logincontroller", function($scope, $http){
                 $scope.email = "";
                 $scope.password = "";
-                
+
                 $scope.login = function(){
                     if($scope.email == "") return;
                     if($scope.password == "") return;
-                    
+
                     $http.get("api/getsalt.php?email=" + $scope.email).success(function(res){
                         if(res.success == true){
                             hashandlogin(res.data.salt, res.data.challenge, res.data.id);
@@ -44,7 +44,7 @@
                     var hash1 = SHA512($scope.password + salt);
                     var hash2 = SHA512(hash1 + challenge);
                     //console.warn(hash1 + "\r\n" + challenge + "\r\n" + hash2);
-                    
+
                     $http.post("api/login.php", {
                         email: $scope.email,
                         hash: hash2
@@ -53,7 +53,7 @@
                             window.location = "index.php";
                         }
                         else{
-                            
+
                         }
                     }).error(function(error){
                         console.error(error);

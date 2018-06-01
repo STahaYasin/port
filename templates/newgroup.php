@@ -6,8 +6,10 @@
       </div>
       <div>
         <form method="post">
-          <input type="text" ng-model="group_name" placeholder="Group Name" required>
-          <input type="text" ng-model="group_number" placeholder="Count of Students" required>
+          <label>Group Name</label>
+          <input type="text" ng-model="group_name"><br>
+          <label>Number of Students</label>
+          <input type="text" ng-model="group_number"><br>
           <input type="submit" ng-click="sendnewgroup()"/>
         </form>
       </div>

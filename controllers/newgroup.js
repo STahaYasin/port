@@ -19,11 +19,11 @@ app.controller("newgroup", function($scope, $http, $location){
             console.error(error);
         });
     }
-    
+
     $scope.group_name = "";
     $scope.group_number = 0;
     $scope.new_message = null;
-    
+
     $scope.sendnewgroup=function(){
         $http({
             method: 'POST',
@@ -34,9 +34,9 @@ app.controller("newgroup", function($scope, $http, $location){
             }
         }).then(function successCallback(res) {
             console.log(res);
-            
+
             $scope.new_message = "New group created successfully!";  //<------
-            
+
         }, function errorCallback(error) {
             console.warn(error);
         });

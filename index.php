@@ -52,12 +52,12 @@ include "api/loginid.php";
                     templateUrl: 'templates/info.php',
                     controller: 'info'
                 })
+                .when('/history', {
+                    templateUrl: 'templates/history.php'
+                })
                 .when('/info/:paramInfo', {
                     templateUrl: 'templates/info.php',
                     controller: 'info'
-                })
-                .when('/scores', {
-                    templateUrl: 'templates/scores.php',
                 })
                 .when('/statistics', {
                     templateUrl: 'templates/statistics.html',
@@ -69,7 +69,7 @@ include "api/loginid.php";
                     templateUrl: 'templates/register.html'
                 })
                 .otherwise({
-                    redirectTo: '/home'
+                    redirectTo: '/newgroup'
                 });
             });
 
@@ -97,7 +97,7 @@ include "api/loginid.php";
         </header>
         <div ng-controller="sidenav" class="sidenav">
                 <a ng-click="openLvlinfo()" href=""><i class="fas fa-edit"></i>Level Info</a>
-                <a ng-click="openScores()" href=""><i class="fas fa-chart-line"></i>Scores</a>
+                <a ng-click="openHistory()" href=""><i class="fas fa-history"></i>History</a>
         </div>
         <main ng-view="ngRoute">
 

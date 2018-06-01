@@ -12,7 +12,7 @@ if(!isset($_SESSION["admin_id"])){
     die(json_encode(new Result(false, "Invalid session!", null)));
 }
 
-$grp_count = ceil($grp_number/5);
+$teams_count = ceil($grp_number/5);
 
 $code;
 if(empty($req->code)){
@@ -22,21 +22,24 @@ else{
     $code = $req->code;
 }
 
-$date = date("Y-m-d H:i:s");
+$date = time();
 $newname = $grp_name;
 
 $ad_id = $_SESSION["admin_id"];
 
 $sql = "INSERT INTO `groups` (`CountTeams`,`G_ID`, `CountUsers`, `Status`, `Name`, `dt_create`, `dt_start`, `dt_stop`, `code`, `AD_ID`)
-        VALUES ('$grp_count', null, '$grp_number', '0', '$newname', '$date', '', '', '$code', '$ad_id');";
-
+        VALUES ('$teams_count', null, '$grp_number', '0', '$newname', '$date', '', '', '$code', '$ad_id');";
 
 
 $sqlres = mysqli_query($conn, $sql) or die(json_encode(new Result(false, "Error in db!", null)));
+include '../api/createteams.php';
+
 $id = $conn->insert_id;
 
 $res = new Result(true, "ok", $id);
 
 die(json_encode($res));
+
+
 
 ?>

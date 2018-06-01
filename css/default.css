@@ -29,6 +29,7 @@ h4{
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 3px 9px -1px grey;
+    text-decoration: none;
 }
 .btn_blue:hover{
     background: #e1e1e1;
@@ -461,10 +462,9 @@ div.sucessmessage{
   color: green;
 }
 div.submitinfo{
-  text-align: center;
+  text-align: right;
 }
 input.submitinfo{
-  cursor: pointer;
   font-weight: bold;
   box-shadow: 0 3px 9px -1px grey;
   cursor: pointer;
@@ -478,4 +478,34 @@ td.character{
   weight: 50%;
   height: 50%;
   position: relative;
+}
+div.exclamation_triangle{
+      width: 7%;
+      margin: 0 auto;
+      position: relative;
+      top: 30%;
+}
+table.scores{
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+.btn_scores{
+    background-color: #4285f4;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 3px 9px -1px grey;
+    text-decoration: none;
+    position: relative;
+    margin: 10px;
+    top: 10px;
+    padding: 5px;
+}
+.btn_scores:hover{
+    background: #e1e1e1;
+    text-decoration: none;
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition-duration: 0.5s;
 }

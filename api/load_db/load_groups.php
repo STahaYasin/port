@@ -1,4 +1,5 @@
 <?php
+include '../db.php';
 
 $prj= mysqli_query($conn,"SELECT * FROM groups") or die(mysqli_error($conn));
         $record = array();
