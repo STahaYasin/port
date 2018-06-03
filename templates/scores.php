@@ -8,7 +8,7 @@ include '../api/load_db/load_teams_scores.php';
 
 foreach ($gname as $groupname) {
 echo '<a class="btn btn_scores" href="../index.php#!/groups">GO BACK</a>
-        <h2 style="text-align:center;">'.$groupname["Name"].'</h2>
+        <h2 style="text-align:center;">Team: <u>'.$groupname["Name"].'</u></h2>
           <table class="scores">
             <tr>
               <th>TEAM ID</th>

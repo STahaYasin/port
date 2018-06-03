@@ -53,7 +53,7 @@ include '../api/load_db/load_groups.php';
       <span class='dot_yellow_info'></span><p class="line">Paused</p><br>
     </div>
     <div class="status">
-      <span class='dot_red_info'></span><p class="line">Stopped/Finished</p><br>
+      <span class='dot_red_info'></span><p class="line">Stopped</p><br>
     </div>
   </body>
 </html>
