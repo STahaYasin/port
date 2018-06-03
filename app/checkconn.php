@@ -6,7 +6,7 @@ require "result.php";
 $res = new Result();
 $res->success = true;
 $res->message = "Connection success";
-$res->data = 512;
+$res->data = $_POST["test"];
 
 die(json_encode($res));
 
