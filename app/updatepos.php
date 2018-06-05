@@ -1,9 +1,10 @@
 <?php
 
-include "result.php";
+//include "result.php";
 include '../db.php';
 
 $userid = $_POST["userid"];
+$groupid = $_POST["groupid"];
 $x = $_POST["x"];
 $y = $_POST["y"];
 $level = $_POST["level"];
@@ -59,8 +60,25 @@ while($row = mysqli_fetch_assoc($prj)){
     array_push($users, $user);
 }
 
+$sqlqtatus = "SELECT status FROM `groups` WHERE G_ID = $groupid";
+$res = new Result();
+$res->success = false;
+$res->message = "Server error 2";
+$res->data = null;
+$sql_res_status = mysqli_query($conn, $sqlqtatus) or die (json_encode($res));
+$status = mysqli_fetch_assoc($sql_res_status);
+
+if($status == null){
+    $res = new Result();
+    $res->success = false;
+    $res->message = "Group does not excist!";
+    $res->data = null;
+    die(json_encode($res));
+}
+
 $res = new Result();
 $res->success = true;
+$res->status = (int)$status["status"];
 $res->message = "";
 $res->data = $users;
 
@@ -73,5 +91,11 @@ class userclass{
     public $x;
     public $y;
     public $level;
+}
+class Result{
+    public $success;
+    public $status;
+    public $message;
+    public $data;
 }
 ?>
