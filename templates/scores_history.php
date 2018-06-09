@@ -28,7 +28,7 @@ while($rowname = mysqli_fetch_assoc($teamname)){
     $tname = $rowname["Name"];
 }
 
-echo '<a class="btn btn_scores" href="../index.php#!/groups">GO BACK</a>
+echo '<a class="btn btn_scores" href="../index.php#!/history">GO BACK</a>
         <h2 style="text-align:center;">Group: '.$tname.'<u></u></h2>
           <table class="scores">
             <tr>

@@ -7,6 +7,8 @@ $grp_number = $data["group_number"];
 include "../db.php";
 include "../result.php";
 
+
+
 session_start();
 if(!isset($_SESSION["admin_id"])){
     die(json_encode(new Result(false, "Invalid session!", null)));
@@ -32,8 +34,34 @@ $sql = "INSERT INTO `groups` (`CountTeams`,`G_ID`, `CountUsers`, `Status`, `Name
 
 
 $sqlres = mysqli_query($conn, $sql) or die(json_encode(new Result(false, "Error in db!", null)));
-include '../api/createteams.php';
 
+include "load_db/max_id.php";
+
+// ADD TEAMS
+$a = 1;
+
+while ($a <= $teams_count) {
+  $sqlteams = "INSERT INTO `teams` (`T_ID`, `G_ID`)
+          VALUES (null, '$MAX_ID');";
+          $sqlresteams = mysqli_query($conn, $sqlteams) or die(json_encode(new Result(false, "Error in db!", null)));
+          $a++;
+
+          $sqlteamid= mysqli_query($conn,"SELECT MAX(T_ID) FROM teams") or die(mysqli_error($conn));
+                  $resultteamid = array();
+                  while($rowteamid = mysqli_fetch_assoc($sqlteamid)){
+                        $resultteamid = $rowteamid;
+                  }
+
+          foreach ($resultteamid as $TEAM_ID) {
+
+          }
+
+//ADD SCORE
+  $sqlscores = "INSERT INTO `scores` (`S_ID`, `T_ID`, `TimeStamp`, `SCORE`)
+          VALUES (null, '$TEAM_ID', '$date', 0);";
+          $sqlresscore = mysqli_query($conn, $sqlscores) or die(json_encode(new Result(false, "Error in db!", null)));
+          $b++;
+}
 $id = $conn->insert_id;
 
 $res = new Result(true, "ok", $id);

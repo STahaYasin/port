@@ -96,8 +96,8 @@ include "api/loginid.php";
             </div>
         </header>
         <div ng-controller="sidenav" class="sidenav">
-                <a ng-click="openLvlinfo()" href=""><i class="fas fa-edit"></i>Level Info</a>
-                <a ng-click="openHistory()" href=""><i class="fas fa-history"></i>History</a>
+          <a ng-click="openHistory()" href=""><i class="fas fa-history"></i>History</a>
+          <a ng-click="openLvlinfo()" href=""><i class="fas fa-edit"></i>Level Info</a>
         </div>
         <main ng-view="ngRoute">
 

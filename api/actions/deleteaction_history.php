@@ -19,8 +19,8 @@ $sqldeleteteams= mysqli_query($conn,"DELETE FROM teams WHERE G_ID=$gid2");
 
 
   if((($conn->query($sqldeletegroup))&&($conn->query($sqldeleteteams)))) {
-      header('location: ../../index.php#!/groups');
+      header('location: ../../index.php#!/history');
 } else{
-      header('location: ../../index.php#!/groups');
+      header('location: ../../index.php#!/history');
 }
 ?>
