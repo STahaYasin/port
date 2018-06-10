@@ -39,7 +39,7 @@ if($group == null){
     $res->data = null;
     die(json_encode($res));
 }
-/*
+
 $sqlcount = "SELECT COUNT(*) as count FROM users WHERE `T_ID`= '$teamid'";
 
 $res = new Result();
@@ -56,8 +56,8 @@ if($count == null){
     $res->data = null;
     die(json_encode($res));
 }
-*/
-if((int)$count["count"] >= 5{
+
+if((int)$count["count"] >= 5){
     $res = new Result();
     $res->success = false;
     $res->message = "Team already filled up";
