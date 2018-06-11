@@ -17,16 +17,18 @@ include '../api/load_db/load_groups.php';
   <body>
     <table>
         <tr>
-          <th>GROUP</th>
           <th>ID</th>
+          <th>GROUP</th>
+          <th>CODE</th>
           <th>STATUS</th>
           <th>ACTION</th>
           <th>SCORES</th>
           <th>DELETE</th>
         </tr>
         <tr ng-repeat="item in groups">
-          <td>{{item.name}}</td>
           <td>{{item.g_id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.code}}</td>
           <td>
               <span ng-show="item.status == 0" class='dot_red'></span>
               <span ng-show="item.status == 1" class='dot_green'></span>

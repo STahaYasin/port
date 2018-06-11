@@ -23,6 +23,7 @@ foreach($record as $rec){
     $group->name = $rec['Name'];
     $group->g_id = $rec['G_ID'];
     $group->status = $rec['Status'];
+    $group->code = $rec['code'];
 
     array_push($groups, $group);
 }
@@ -34,5 +35,6 @@ class Group{
     public $name;
     public $g_id;
     public $status;
+    public $code;
 }
 ?>
