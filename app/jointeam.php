@@ -65,6 +65,8 @@ if((int)$count["count"] >= 5){
     die(json_encode($res));
 }
 
+$co = (int)$count["count"] + 1;
+
 $sqluser = "SELECT * FROM users WHERE U_ID = $userid";
 
 $res = new Result();
@@ -84,6 +86,7 @@ if($user == null){
 
 
 $sql_update = "UPDATE `users` SET `T_ID` = $teamid WHERE `users`.`U_ID` = $userid";
+$sql_update = "UPDATE `users` SET `T_ID` = $teamid, `character` = $co WHERE `users`.`U_ID` = $userid;";
 
 if ($conn->query($sql_update) === TRUE) {
     $res = new Result();
