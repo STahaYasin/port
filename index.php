@@ -15,8 +15,6 @@ include "api/loginid.php";
         <script src="js/angular.min.js"></script>
         <script src="js/angular.route.min.js"></script>
 
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>-->
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>-->
@@ -96,8 +94,8 @@ include "api/loginid.php";
             </div>
         </header>
         <div ng-controller="sidenav" class="sidenav">
-          <a ng-click="openHistory()" href=""><i class="fas fa-history"></i>History</a>
-          <a ng-click="openLvlinfo()" href=""><i class="fas fa-edit"></i>Level Info</a>
+          <a ng-click="openHistory()" href=""><img src="images\icons\historypic.png">History</a>
+          <a ng-click="openLvlinfo()" href=""><img src="images\icons\infopic.png">Level Info</a>
         </div>
         <main ng-view="ngRoute">
 

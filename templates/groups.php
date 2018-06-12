@@ -44,8 +44,8 @@ include '../api/load_db/load_groups.php';
               <a ng-show="item.status == 3" style="color:black;">Finished</a>
             </div>
           </td>
-          <td><a href="templates/scores.php?G_ID={{item.g_id}}"><i class="fas fa-chart-line"></i></a></td>
-          <td><a href="api/actions/confirmdelete.php?G_ID={{item.g_id}}"><i class="fas fa-trash-alt"></i></a></td>
+          <td><a href="templates/scores.php?G_ID={{item.g_id}}"><img src="images\icons\scorespic.png"></a></td>
+          <td><a href="api/actions/confirmdelete.php?G_ID={{item.g_id}}"><img src="images\icons\deletepic.png"></a></td>
         </tr>
       </table>
     <div class="status">

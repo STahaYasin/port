@@ -1,5 +1,4 @@
 <link href="../../css/default.css" type="text/css" rel="stylesheet"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <?php
 include '../../db.php';
 
@@ -15,7 +14,7 @@ $prj = mysqli_query($conn,"SELECT Name FROM groups WHERE G_ID=$gid") or die(mysq
         }
 
 
-echo '<div class="exclamation_triangle"><i class="fas fa-exclamation-triangle" style="color:red;font-size:60px"></i></div>
+echo '<div class="exclamation_triangle"><img src="..\..\images\icons\deletealertpic.png"></div>
       <div class="centerdiv">
         Do you really want to DELETE group '; echo $gname; echo '? <br>
         <a class="alertstopbutton" href="deleteaction_history.php?G_ID='.$gid.'">YES</a>

@@ -15,7 +15,7 @@ $prj = mysqli_query($conn,"SELECT Name FROM groups WHERE G_ID=$gid") or die(mysq
         }
 
 
-echo '<div class="exclamation_triangle"><i class="fas fa-exclamation-triangle" style="color:red;font-size:60px"></i></div>
+echo '<div class="exclamation_triangle"><img src="..\..\images\icons\deletealertpic.png"></div>
       <div class="centerdiv">
         Do you really want to DELETE group '; echo $gname; echo '? <br>
         <a class="alertstopbutton" href="deleteaction.php?G_ID='.$gid.'">YES</a>
