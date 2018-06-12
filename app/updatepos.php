@@ -46,7 +46,7 @@ if ($conn->query($updatesql) === TRUE) {
 }
 
 $teamid = $user["T_ID"];
-$sqlgetotherpositions = "Select U_ID, x, y, level from users where T_ID = $teamid and U_ID != $userid";
+$sqlgetotherpositions = "Select U_ID, x, y, level, `character` from users where T_ID = $teamid and U_ID != $userid";
 
 $prj= mysqli_query($conn, $sqlgetotherpositions) or die(mysqli_error($conn));
 $users = array();
@@ -56,6 +56,7 @@ while($row = mysqli_fetch_assoc($prj)){
     $user->x = $row["x"];
     $user->y = $row["y"];
     $user->level = $row["level"];
+    $user->character = $row["character"];
     
     array_push($users, $user);
 }
@@ -91,6 +92,7 @@ class userclass{
     public $x;
     public $y;
     public $level;
+    public $character;
 }
 class Result{
     public $success;
