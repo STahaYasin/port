@@ -94,6 +94,7 @@ if ($conn->query($sql_update) === TRUE) {
     $res->success = true;
     $res->message = "User updated successfully";
     $res->data = (int)$teamid;
+    $res->data2 = (int)$co;
     die(json_encode($res));
 } else {
     $res = new Result();
